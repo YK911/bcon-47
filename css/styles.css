@@ -1,0 +1,71 @@
+:root {
+  /* fonts */
+  --main-font: Open Sans, sans-serif;
+
+  /* text colors */
+  --main-txt-cl: #303030;
+  --light-txt-cl: #ffffff;
+  --accent-txt-cl: #ff6c00;
+
+  /* bg colors  */
+  --accent-bg-cl: #ff6c00;
+  --main-bg-cl: #303030;
+  /* others */
+}
+
+body {
+  font-family: var(--main-font);
+  color: var(--main-txt-cl);
+}
+
+/* reset */
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+.list {
+  list-style: none;
+}
+
+/**
+  |============================
+  | Header styles
+  |============================
+*/
+.header {
+  background-color: var(--main-bg-cl);
+}
+.header-link,
+.header-contact {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+
+  color: var(--light-txt-cl);
+}
+
+.header-link:hover,
+.header-link:focus,
+.header-contact:hover,
+.header-contact:focus {
+  color: var(--accent-txt-cl);
+}
+
+.header-btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--light-txt-cl);
+
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header-btn:hover,
+.header-btn:focus {
+  background-color: var(--accent-bg-cl);
+}

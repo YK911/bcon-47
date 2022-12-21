@@ -247,6 +247,7 @@ img {
 
   background-color: lightblue;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .box-item {
@@ -254,13 +255,23 @@ img {
   height: 150px;
 
   font-size: 2em;
-  /* line-height: 150px; */
+  line-height: 150px;
   text-align: center;
   color: white;
   background-color: blueviolet;
   border-radius: 10px;
 }
-/*
-.box-item:nth-child(3) {
-  font-size: 4em;
-} */
+
+/**
+  |============================
+  | Flexbox layout
+  |============================
+*/
+
+.box {
+  /* default properties */
+}
+
+.box-item {
+  /* default properties */
+}

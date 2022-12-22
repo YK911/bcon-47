@@ -19,6 +19,27 @@
 
   /* Others */
   --btn-radius: 25px;
+  --indent: 30px;
+  --items: 4;
+}
+
+/* reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
 }
 
 /**
@@ -34,6 +55,22 @@ body {
   letter-spacing: 0.02em;
 }
 
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
 .link {
   text-decoration: none;
   color: currentColor;
@@ -41,6 +78,8 @@ body {
 
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .visually-hidden {
@@ -66,6 +105,8 @@ body {
 }
 
 .uppertitle {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -78,6 +119,8 @@ body {
 }
 
 .title {
+  margin-bottom: 20px;
+
   font-family: var(--secondary-font);
   font-size: 42px;
   line-height: calc(49 / 42);
@@ -85,6 +128,8 @@ body {
 }
 
 .title-theme-dark {
+  margin-bottom: 44px;
+
   color: var(--light-txt-cl);
 }
 
@@ -97,6 +142,10 @@ body {
 }
 
 .btn {
+  min-width: 160px;
+  min-height: 40px;
+  padding: 11px 19px;
+
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -105,8 +154,10 @@ body {
   text-transform: uppercase;
   color: var(--main-txt-cl);
 
+  border: 1px solid var(--accent-bg-cl);
+  border-radius: var(--btn-radius);
+
   background-color: transparent;
-  cursor: pointer;
 }
 
 .btn:hover,
@@ -125,6 +176,21 @@ body {
 
 /**
   |============================
+  | Card set
+  |============================
+*/
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.card-set-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+/**
+  |============================
   | Header
   |============================
 */
@@ -132,8 +198,30 @@ body {
   background-color: var(--dark-bg-cl);
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  margin-right: 131px;
+}
+
+.header-nav {
+  margin-right: auto;
+}
+
+.header-list {
+  display: flex;
+  gap: 30px;
+}
+
 .header-nav-link,
 .header-contact {
+  display: block;
+  padding-top: 52px;
+  padding-bottom: 52px;
+
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -147,6 +235,12 @@ body {
 .header-contact:hover,
 .header-contact:focus {
   color: var(--accent-txt-cl);
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 /**
@@ -179,7 +273,6 @@ body {
   letter-spacing: 0.1em;
   color: var(--light-txt-cl);
   background-color: transparent;
-  cursor: pointer;
 }
 
 .hero-controls-btn.next {
@@ -197,7 +290,27 @@ body {
   | About
   |============================
 */
+.about-container {
+  display: flex;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+  margin-right: 30px;
+}
+
+.about-right-side {
+  flex-basis: 470px;
+}
+
+.about-undertitle {
+  margin-bottom: 20px;
+}
+
 .about-desc {
+  margin-bottom: 42px;
+
   font-size: 14px;
   line-height: calc(26 / 14);
   letter-spacing: 0.02em;
@@ -213,8 +326,49 @@ body {
   background-color: var(--dark-bg-cl);
 }
 
+.price-block {
+  display: flex;
+  gap: 30px;
+
+  margin-bottom: 44px;
+}
+
+.price-list {
+  flex-basis: 570px;
+  padding: 30px 20px;
+}
+
+.price-list:first-child {
+  outline: 2px solid lightgreen;
+  outline-offset: -2px;
+}
+.price-list:last-child {
+  outline: 2px solid lightcoral;
+  outline-offset: -2px;
+}
+
 .price-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+
   color: var(--grey-cl);
+}
+
+.price-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+}
+
+.price-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /**
@@ -257,6 +411,10 @@ body {
   background-color: #f7f7f7;
 }
 
+.team-list {
+  --items: 3;
+}
+
 .team-name {
   font-weight: 400;
   font-size: 18px;
@@ -278,6 +436,11 @@ body {
   | Gallery
   |============================
 */
+
+.gallery-img {
+  max-width: 100%;
+  height: auto;
+}
 /**
   |============================
   | Booking

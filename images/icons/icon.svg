@@ -1,0 +1,24 @@
+<svg
+  width="688"
+  height="511"
+  viewBox="-10 -10 688 511"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  stroke="red"
+  stroke-width="3px"
+>
+  <rect
+    width="688"
+    height="511"
+    fill="rgba(10,104,199,0.676)"
+  />
+  <ellipse
+    cx="100"
+    cy="100"
+    rx="100"
+    ry="100"
+    fill="#d14c4c"
+    stroke="#eeff00"
+    stroke-width="30px"
+  />
+</svg>

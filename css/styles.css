@@ -20,7 +20,7 @@
   /* Others */
   --btn-radius: 25px;
   --indent: 30px;
-  --items: 4;
+  --items: 3;
 }
 
 /* reset */
@@ -36,6 +36,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 button {
@@ -67,8 +69,8 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 
 .link {
@@ -376,11 +378,47 @@ body {
   | Benefits
   |============================
 */
+.benefits-container {
+  display: flex;
+  gap: 30px;
+}
+
+.benefits-left-side {
+  flex-basis: 50%;
+}
+
+.benefits-list {
+  width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.benefits-item {
+  width: 170px;
+  min-height: 133px;
+  padding: 20px 24px;
+
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.benefits-item:nth-child(2n) {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.benefits-right-side {
+  flex-basis: 500px;
+}
+
 .benefits-quantity {
   font-weight: 700;
   font-size: 42px;
   line-height: calc(57 / 42);
-  text-align: center;
   letter-spacing: 0.05em;
 
   color: #303030;
@@ -411,11 +449,14 @@ body {
   background-color: #f7f7f7;
 }
 
-.team-list {
-  --items: 3;
+.team-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team-name {
+  margin-bottom: 8px;
+
   font-weight: 400;
   font-size: 18px;
   line-height: calc(25 / 18);
@@ -424,6 +465,8 @@ body {
 }
 
 .team-position {
+  margin-bottom: 30px;
+
   font-size: 14px;
   line-height: calc(19 / 14);
   text-align: center;
@@ -431,11 +474,69 @@ body {
 
   color: var(--accent-txt-cl);
 }
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  /* background-color: #fff; */
+  /* border: 1px solid grey; */
+  border-radius: 50%;
+}
+
+/* .socials-link:hover,
+.socials-link:focus {
+  background-color: darkblue;
+  border-color: #ff6c00;
+} */
+
+/* .socials-icon {
+  fill: #303030;
+} */
+/*
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: #ff6c00;
+} */
+/* .socials-icon:hover,
+.socials-icon:focus {
+  fill: #ff6c00;
+} */
+
+/* Зміна кольору через наслідування */
+.socials-link {
+  color: #303030;
+  background-color: lightblue;
+}
+.socials-link:hover,
+.socials-link:focus {
+  color: #ff6c00;
+  background-color: darkslategray;
+}
+
+.socials-icon {
+  fill: currentColor;
+}
+
 /**
   |============================
   | Gallery
   |============================
 */
+.gallery-list {
+  --items: 4;
+}
 
 .gallery-img {
   max-width: 100%;
@@ -446,8 +547,17 @@ body {
   | Booking
   |============================
 */
-.booking {
+.contacts-wrapper {
   background-color: var(--dark-bg-cl);
+}
+
+.contacts-container {
+  display: flex;
+  gap: 30px;
+}
+
+.booking {
+  flex-basis: 50%;
 }
 
 /**
@@ -456,14 +566,26 @@ body {
   |============================
 */
 .contacts {
-  background-color: var(--dark-bg-cl);
+  flex-basis: 50%;
 }
 .contacts-address {
   font-style: normal;
 }
 
 .contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   color: var(--grey-cl);
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: #ff6c00;
+}
+
+.contacts-icon {
+  stroke: currentColor;
 }
 
 .contacts-uppertitle {

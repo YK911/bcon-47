@@ -23,7 +23,7 @@
   </head>
   <body>
     <!-- Header section -->
-    <header class="header">
+    <header class="header" data-header>
       <div class="header-container container">
         <a class="header-logo link" href="./index.html">
           <img
@@ -58,31 +58,42 @@
     </header>
     <main>
       <!-- Hero section -->
-      <section class="hero section">
-        <div class="container">
-          <ul class="media-list list">
-            <li class="media-item">
-              <a class="media-link link" href="">Instagram</a>
-            </li>
-            <li class="media-item">
-              <a class="media-link link" href="">Youtube</a>
-            </li>
-          </ul>
+      <section class="hero">
+        <div class="hero-container container">
+          <div class="hero-left-side">
+            <ul class="hero-media-list media-list list">
+              <li class="media-item">
+                <a class="media-link link" href="">Instagram</a>
+              </li>
+              <li class="media-item">
+                <a class="media-link link" href="">Youtube</a>
+              </li>
+            </ul>
+          </div>
           <div class="hero-right-side">
-            <p class="uppertitle uppertitle-theme-dark">A hair salon for men in Kyiv</p>
-            <h1 class="main-title">BarberShop</h1>
-            <p class="undertitle undertitle-theme-dark">
+            <p class="hero-uppertitle uppertitle uppertitle-theme-dark">
+              A hair salon for men in Kyiv
+            </p>
+            <h1 class="hero-title main-title">BarberShop</h1>
+            <p class="hero-undertitle undertitle undertitle-theme-dark">
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
           </div>
-          <ul class="hero-controls list">
-            <li class="hero-controls-item">
-              <button class="hero-controls-btn prev" type="button">Back</button>
+          <!-- <div class="slider"> -->
+          <ul class="slider-pagination list">
+            <li class="sider-pagination-item active"></li>
+            <li class="sider-pagination-item"></li>
+            <li class="sider-pagination-item"></li>
+          </ul>
+          <ul class="slider-controls list">
+            <li class="slider-item">
+              <button class="slider-btn prev" type="button" disabled>Back</button>
             </li>
-            <li class="hero-controls-item">
-              <button class="hero-controls-btn next" type="button">Forward</button>
+            <li class="slider-item">
+              <button class="slider-btn next" type="button">Forward</button>
             </li>
           </ul>
+          <!-- </div> -->
         </div>
       </section>
       <!-- About section -->
@@ -131,23 +142,31 @@
           <h2 class="title title-theme-dark">Services and prices</h2>
           <div class="price-block">
             <ul class="price-list list">
-              <li class="price-item">Men’s haircut <span class="line"></span> from 300 uah.</li>
-              <li class="price-item">Beard trim <span class="line"></span> from 300 uah.</li>
-              <li class="price-item">Mustache trim <span class="line"></span> from 200 uah.</li>
               <li class="price-item">
-                Straight razor shave <span class="line"></span> from 200 uah.
+                <span class="price-service">Men’s haircut</span> from 300 uah.
+              </li>
+              <li class="price-item">
+                <span class="price-service">Beard trim</span> from 300 uah.
+              </li>
+              <li class="price-item">
+                <span class="price-service">Mustache trim</span> from 200 uah.
+              </li>
+              <li class="price-item">
+                <span class="price-service">Straight razor shave</span> from 200 uah.
               </li>
             </ul>
             <ul class="price-list list">
-              <li class="price-item">Trainee’s haircut <span class="line"></span> from 50 uah.</li>
               <li class="price-item">
-                Haircut under the nozzle <span class="line"></span> from 200 uah.
+                <span class="price-service">Trainee’s haircut</span> from 50 uah.
               </li>
               <li class="price-item">
-                Children’s haircut (0-12 y.o.) <span class="line"></span> from 300 uah.
+                <span class="price-service">Haircut under the nozzle</span> from 200 uah.
               </li>
               <li class="price-item">
-                Camouflage of gray hair <span class="line"></span> from 200 uah.
+                <span class="price-service">Children’s haircut (0-12 y.o.)</span> from 300 uah.
+              </li>
+              <li class="price-item">
+                <span class="price-service">Camouflage of gray hair</span> from 200 uah.
               </li>
             </ul>
           </div>
@@ -280,13 +299,9 @@
                       rel="noopener noreferrer"
                       aria-label="Instagram"
                     >
-                      <img
-                        class="socials-icon"
-                        src="./images/team/icon-1.png"
-                        alt="Instagram icon"
-                        width="44"
-                        height="44"
-                      />
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="socials-item">
@@ -297,13 +312,9 @@
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img
-                        class="socials-icon"
-                        src="./images/team/icon-2.png"
-                        alt="Twitter icon"
-                        width="44"
-                        height="44"
-                      />
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="socials-item">
@@ -314,13 +325,9 @@
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img
-                        class="socials-icon"
-                        src="./images/team/icon-3.png"
-                        alt="Facebook icon"
-                        width="44"
-                        height="44"
-                      />
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="socials-item">
@@ -331,13 +338,9 @@
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img
-                        class="socials-icon"
-                        src="./images/team/icon-4.png"
-                        alt="LinkedIn icon"
-                        width="44"
-                        height="44"
-                      />
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
                     </a>
                   </li>
                 </ul>
@@ -363,13 +366,9 @@
                       rel="noopener noreferrer"
                       aria-label="Instagram"
                     >
-                      <img
-                        class="socials-icon"
-                        src="./images/team/icon-1.png"
-                        alt="Instagram icon"
-                        width="44"
-                        height="44"
-                      />
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="socials-item">
@@ -380,13 +379,9 @@
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img
-                        class="socials-icon"
-                        src="./images/team/icon-2.png"
-                        alt="Twitter icon"
-                        width="44"
-                        height="44"
-                      />
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="socials-item">
@@ -397,13 +392,9 @@
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img
-                        class="socials-icon"
-                        src="./images/team/icon-3.png"
-                        alt="Facebook icon"
-                        width="44"
-                        height="44"
-                      />
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="socials-item">
@@ -414,13 +405,9 @@
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img
-                        class="socials-icon"
-                        src="./images/team/icon-4.png"
-                        alt="LinkedIn icon"
-                        width="44"
-                        height="44"
-                      />
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
                     </a>
                   </li>
                 </ul>
@@ -492,6 +479,9 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/icons.svg#map-pin"></use>
+                    </svg>
                     st. Vasilkovaya, 7A <br />
                     Kiev, 08132
                   </a>
@@ -505,15 +495,18 @@
                   </a>
                 </li>
                 <li class="contacts-item">
-                  <a class="contacts-link link" href="mailto:barbershop@email.com"
-                    >barbershop@email.com
+                  <a class="contacts-link link" href="mailto:barbershop@email.com">
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/icons.svg#mail"></use>
+                    </svg>
+                    barbershop@email.com
                   </a>
                 </li>
               </ul>
             </address>
-            <div>
-              <p class="contacts-uppertitle">working hours</p>
-              <p class="contacts-schedule">
+            <div class="contacts-schedule">
+              <p class="uppertitle uppertitle-theme-dark">working hours</p>
+              <p class="contacts-timesheet">
                 Every day from <time datetime="09:00">9:00</time> to
                 <time datetime="22:00">22:00</time>
               </p>
@@ -524,7 +517,7 @@
     </main>
     <!-- Footer section -->
     <footer class="footer">
-      <div class="container">
+      <div class="footer-container container">
         <p class="footer-copyright">&#169; Copyright 2020</p>
         <ul class="media-list list">
           <li class="media-item">
@@ -536,5 +529,7 @@
         </ul>
       </div>
     </footer>
+
+    <script src="./js/header.js"></script>
   </body>
 </html>

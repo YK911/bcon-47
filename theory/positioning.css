@@ -24,7 +24,7 @@ img {
   display: block;
 }
 
-.realtive-box {
+.relative-box {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -65,7 +65,24 @@ img {
   | Position relative
   |============================
 */
+.relative-box {
+  position: relative;
+}
+
+.box:nth-child(1) {
+  position: relative;
+  z-index: 1;
+}
 .box:nth-child(2) {
+  position: absolute;
+  left: 50px;
+  top: 150px;
+}
+
+.box:nth-child(3) {
+  position: relative;
+  left: 250px;
+  z-index: -1;
 }
 
 /**
@@ -74,6 +91,10 @@ img {
   |============================
 */
 .fixed-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -126,6 +147,10 @@ img {
 .header-link.current::after {
   content: '';
 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
   display: block;
   width: 100%;
   height: 5px;
@@ -140,6 +165,7 @@ img {
   |============================
 */
 .wrapper {
+  position: relative;
 }
 
 .wrapper::before {
@@ -157,10 +183,15 @@ img {
 }
 
 .thumb {
+  overflow: hidden;
   border-radius: 20px;
 }
 
 .overlay-box {
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+
   width: 90%;
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(2px);
@@ -173,4 +204,28 @@ img {
   color: white;
   text-align: center;
   letter-spacing: 0.04em;
+}
+
+/**
+  |============================
+  | Overflow
+  |============================
+*/
+.block {
+  overflow-x: scroll;
+  width: 250px;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+.block-text {
+  width: 350px;
+  height: 40px;
+  border: 1px dashed teal;
+
+  overflow: auto;
+}
+
+.text {
+  background-color: lightblue;
 }

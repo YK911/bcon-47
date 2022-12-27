@@ -18,21 +18,24 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
+    <!-- Animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
     <!-- Header section -->
     <header class="header" data-header>
       <div class="header-container container">
-        <a class="header-logo link" href="./index.html">
-          <img
-            class="header-img"
-            src="./images/header/logo.png"
-            alt="BarberSop logo"
-            width="68"
-            height="56"
-          />
+        <a class="header-logo link" href="./index.html" aria-label="BarberSop logo">
+          <svg class="header-img" width="68" height="56">
+            <use href="./images/icons.svg#icon-logo"></use>
+          </svg>
         </a>
         <nav class="header-nav">
           <ul class="header-list list">
@@ -52,7 +55,9 @@
         </nav>
         <div class="header-wrapper">
           <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn btn-theme-dark" type="button">Online-booking</button>
+          <button class="btn btn-theme-dark animate__animated" type="button" data-modal-open>
+            Online-booking
+          </button>
         </div>
       </div>
     </header>
@@ -79,21 +84,21 @@
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
           </div>
-          <!-- <div class="slider"> -->
-          <ul class="slider-pagination list">
-            <li class="sider-pagination-item active"></li>
-            <li class="sider-pagination-item"></li>
-            <li class="sider-pagination-item"></li>
-          </ul>
-          <ul class="slider-controls list">
-            <li class="slider-item">
-              <button class="slider-btn prev" type="button" disabled>Back</button>
-            </li>
-            <li class="slider-item">
-              <button class="slider-btn next" type="button">Forward</button>
-            </li>
-          </ul>
-          <!-- </div> -->
+          <div class="slider">
+            <ul class="slider-pagination list">
+              <li class="sider-pagination-item active"></li>
+              <li class="sider-pagination-item"></li>
+              <li class="sider-pagination-item"></li>
+            </ul>
+            <ul class="slider-controls list">
+              <li class="slider-item">
+                <button class="slider-btn prev" type="button" disabled>Back</button>
+              </li>
+              <li class="slider-item">
+                <button class="slider-btn next" type="button">Forward</button>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <!-- About section -->
@@ -178,19 +183,19 @@
         <div class="benefits-container container">
           <div class="benefits-left-side">
             <ul class="benefits-list list">
-              <li class="benefits-item">
+              <li class="benefits-item" data-aos="zoom-in" data-aos-delay="300">
                 <p class="benefits-quantity">600 <sup class="benefits-decor">+</sup></p>
                 <p class="benefits-text">Satisfied customers per day</p>
               </li>
-              <li class="benefits-item">
+              <li class="benefits-item" data-aos="zoom-in" data-aos-delay="600">
                 <p class="benefits-quantity">50 <sup class="benefits-decor">+</sup></p>
                 <p class="benefits-text">Awards for excellent service</p>
               </li>
-              <li class="benefits-item">
+              <li class="benefits-item" data-aos="zoom-in" data-aos-delay="900">
                 <p class="benefits-quantity">20 <sup class="benefits-decor">+</sup></p>
                 <p class="benefits-text">Kyiv’s best barbers</p>
               </li>
-              <li class="benefits-item">
+              <li class="benefits-item" data-aos="zoom-in" data-aos-delay="1200">
                 <p class="benefits-quantity">100 <sup class="benefits-decor">+</sup></p>
                 <p class="benefits-text">Gifts for regular customers</p>
               </li>
@@ -213,13 +218,18 @@
           <h2 class="title">Our barbers</h2>
           <ul class="team-list card-set list">
             <li class="team-item card-set-item">
-              <img
-                class="team-avatar"
-                src="./images/team/img-1.jpg"
-                alt="John Smith"
-                width="370"
-                height="346"
-              />
+              <div class="team-block">
+                <img
+                  class="team-avatar"
+                  src="./images/team/img-1.jpg"
+                  alt="John Smith"
+                  width="370"
+                  height="346"
+                />
+                <div class="overlay">
+                  <p class="overlay-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+              </div>
               <div class="team-wrapper">
                 <h3 class="team-name">John Smith</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -422,7 +432,7 @@
           <p class="uppertitle">in Latin, "barba" means "beard"</p>
           <h2 class="visually-hidden">Our gallery</h2>
           <ul class="gallery-list card-set list">
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set-item" data-aos="flip-left" data-aos-delay="300">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-1.jpg"
@@ -431,7 +441,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set-item" data-aos="flip-left" data-aos-delay="600">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-2.jpg"
@@ -440,7 +450,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set-item" data-aos="flip-left" data-aos-delay="900">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-3.jpg"
@@ -449,7 +459,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set-item" data-aos="flip-left" data-aos-delay="1200">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-4.jpg"
@@ -530,6 +540,21 @@
       </div>
     </footer>
 
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          <svg class="modal-btn-icon" width="24" height="24">
+            <use href="./images/icons.svg#xmark"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/aos.js"></script>
     <script src="./js/header.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

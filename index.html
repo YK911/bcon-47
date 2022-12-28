@@ -476,6 +476,44 @@
           <!-- Booking section -->
           <section class="booking section">
             <h2 class="title title-theme-dark">Online-booking</h2>
+            <form class="booking-form" name="booking_form">
+              <div class="booking-form-group">
+                <label class="booking-form-field">
+                  <input
+                    class="booking-form-input"
+                    type="text"
+                    name="user_name"
+                    minlength="3"
+                    required
+                    placeholder="Lily Dalas"
+                  />
+                  <span class="booking-form-label">Name*</span>
+                </label>
+                <label class="booking-form-field">
+                  <input
+                    class="booking-form-input"
+                    type="tel"
+                    name="user_phone"
+                    required
+                    minlength="12"
+                    maxlength="12"
+                    placeholder="+38 099 123 45 67"
+                  />
+                  <span class="booking-form-label">Phone*</span>
+                </label>
+              </div>
+              <label class="booking-form-field wide">
+                <textarea
+                  class="booking-form-message"
+                  name="user_message"
+                  rows="4"
+                  placeholder="Type your message..."
+                ></textarea>
+                <span class="booking-form-label">Message</span>
+              </label>
+
+              <button class="btn btn-theme-dark" type="submit">Send</button>
+            </form>
           </section>
           <!-- Contatcs section -->
           <section class="contacts section" id="contacts">
@@ -548,6 +586,64 @@
             <use href="./images/icons.svg#xmark"></use>
           </svg>
         </button>
+        <strong class="modal-label">Leave your details and we will call you</strong>
+        <form class="modal-form" name="modal_form">
+          <div class="modal-form-group" role="group">
+            <label class="modal-form-label" for="user_name">Name</label>
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-field"
+                type="text"
+                name="user_name"
+                id="user_name"
+                minlength="3"
+                required
+                placeholder=" "
+              />
+              <svg class="modal-form-icon" width="20" height="20">
+                <use href="./images/icons.svg#user-pic"></use>
+              </svg>
+              <svg class="modal-form-icon-attention" width="20" height="20">
+                <use class="warning" href="./images/icons.svg#warning"></use>
+                <use class="success" href="./images/icons.svg#success"></use>
+              </svg>
+            </div>
+            <label class="modal-form-label" for="user_phone">Phone</label>
+            <div class="modal-form-wrapper">
+              <input class="modal-form-field" type="tel" name="user_phone" id="user_phone" />
+              <svg class="modal-form-icon" width="20" height="20">
+                <use href="./images/icons.svg#user-phone"></use>
+              </svg>
+            </div>
+            <label class="modal-form-label" for="user_mail">Mail</label>
+            <div class="modal-form-wrapper">
+              <input class="modal-form-field" type="text" name="user_mail" id="user_mail" />
+              <svg class="modal-form-icon" width="20" height="20">
+                <use href="./images/icons.svg#user-mail"></use>
+              </svg>
+            </div>
+            <label class="modal-form-label" for="user_message">Comment</label>
+            <textarea
+              class="modal-form-message"
+              name="user_message"
+              id="user_message"
+              rows="6"
+            ></textarea>
+          </div>
+          <div class="modal-form-agreement" role="group">
+            <input class="modal-form-checkbox" type="checkbox" id="user_agreement" />
+            <!-- Варіант реалізації чекбокса через дві іконки -->
+            <!-- <svg class="modal-form-agreement-icon" width="18" height="16">
+              <use class="uncheck" href="./images/icons.svg#icon-uncheck"></use>
+              <use class="check" href="./images/icons.svg#icon-check"></use>
+            </svg> -->
+            <label class="modal-form-agreement-desc" for="user_agreement">
+              Погоджуюся з розсилкою та приймаю
+              <a class="modal-form-agreement-link" href="">Умови договору</a>
+            </label>
+          </div>
+          <button class="modal-form-btn btn" type="submit">Send</button>
+        </form>
       </div>
     </div>
 

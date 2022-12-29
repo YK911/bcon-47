@@ -57,7 +57,7 @@ button {
   | Base styles
   |============================
 */
-body {
+.page {
   font-family: var(--main-font);
   color: var(--main-txt-cl);
   font-size: 18px;
@@ -134,11 +134,11 @@ body {
   background-color: var(--main-txt-cl);
 }
 
-.uppertitle-theme-dark {
+.uppertitle--theme-dark {
   color: var(--grey-cl-60);
 }
 
-.uppertitle-theme-dark::before {
+.uppertitle--theme-dark::before {
   background-color: var(--grey-cl-60);
 }
 
@@ -151,7 +151,7 @@ body {
   letter-spacing: 0.05em;
 }
 
-.title-theme-dark {
+.title--theme-dark {
   margin-bottom: 44px;
 
   color: var(--light-txt-cl);
@@ -161,7 +161,7 @@ body {
   color: var(--dark-txt-cl);
 }
 
-.undertitle-theme-dark {
+.undertitle--theme-dark {
   color: var(--grey-cl);
 }
 
@@ -242,7 +242,7 @@ body {
   gap: var(--indent);
 }
 
-.card-set-item {
+.card-set__item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
@@ -724,7 +724,7 @@ body {
   background-color: var(--grey-bg-cl);
 }
 
-.team-block {
+.team__block {
   position: relative;
   overflow: hidden;
 }
@@ -750,16 +750,16 @@ body {
   transition: transform var(--anim-fast);
 }
 
-.team-item:hover .overlay {
+.team__item:hover .overlay {
   transform: translateY(0);
 }
 
-.team-wrapper {
+.team__wrapper {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.team-name {
+.team__name {
   margin-bottom: 8px;
 
   font-weight: 400;
@@ -769,7 +769,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-.team-position {
+.team__position {
   margin-bottom: 30px;
 
   font-size: 14px;
@@ -780,6 +780,7 @@ body {
   color: var(--accent-txt-cl);
 }
 
+/* social links */
 .socials {
   display: flex;
   justify-content: center;
@@ -787,7 +788,7 @@ body {
   gap: 10px;
 }
 
-.socials-link {
+.socials__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -801,12 +802,12 @@ body {
   transition: color var(--anim-fast);
 }
 
-.socials-link:hover,
-.socials-link:focus {
+.socials__link:hover,
+.socials__link:focus {
   color: var(--accent-txt-cl);
 }
 
-.socials-icon {
+.socials__icon {
   fill: currentColor;
 }
 
@@ -815,13 +816,12 @@ body {
   | Gallery
   |============================
 */
-.gallery-list {
-  --items: 4;
+.gallery__uppertitle {
+  margin-bottom: 44px;
 }
 
-.gallery-img {
-  max-width: 100%;
-  height: auto;
+.gallery__list {
+  --items: 4;
 }
 /**
   |============================

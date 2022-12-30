@@ -1,0 +1,30 @@
+.media-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  &::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: var(--main-txt-cl);
+  }
+}
+
+.media-link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+
+  transition: color var(--anim-fast);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-txt-cl);
+  }
+}

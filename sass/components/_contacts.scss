@@ -1,0 +1,41 @@
+/**
+  |============================
+  | Contatcs
+  |============================
+*/
+.contacts {
+  @extend %section;
+
+  padding-left: 100px;
+  flex-basis: 50%;
+}
+
+.contacts-address {
+  margin-bottom: 72px;
+
+  font-style: normal;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--grey-cl);
+}
+
+.contacts-item:first-child .contacts-link {
+  font-weight: 700;
+}
+
+.contacts-icon {
+  stroke: var(--grey-cl);
+  fill: transparent;
+}
+
+.contacts-timesheet {
+  color: var(--grey-cl);
+}

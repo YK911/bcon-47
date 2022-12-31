@@ -1,0 +1,84 @@
+:root {
+  /* Fonts */
+  --main-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* Text colors */
+  --main-txt-cl: #303030;
+  --accent-txt-cl: #ff6c00;
+  --light-txt-cl: #ffffff;
+  --dark-txt-cl: #555555;
+
+  --grey-cl: rgb(157, 164, 189);
+  --grey-cl-40: rgba(157, 164, 189, 0.4);
+  --grey-cl-60: rgba(157, 164, 189, 0.6);
+
+  /* BG colors */
+  --dark-bg-cl: #191c26;
+  --light-bg-cl: #ffffff;
+  --accent-bg-cl: #ff6c00;
+  --grey-bg-cl: #f7f7f7;
+
+  /* Others */
+  --btn-radius: 25px;
+  --indent: 30px;
+  --items: 3;
+
+  --idx-header: 100;
+  --idx-modal: 1000;
+
+  --anim-fast: 300ms ease;
+  --anim-slow: 600ms ease-in-out;
+}
+
+$benefit-colors: (
+  light: grey,
+  dark: darkslategray,
+  accent: blueviolet,
+  primary: lightblue,
+);
+
+/* Text colors */
+$text-colors: (
+  main: #303030,
+  accent: #ff6c00,
+  light: #ffffff,
+  dark: #555555,
+  grey: rgb(157, 164, 189),
+  grey-40: rgba(157, 164, 189, 0.4),
+  grey-60: rgba(157, 164, 189, 0.6),
+);
+
+/* BG colors */
+$bg-colors: (
+  dark: #191c26,
+  light: #ffffff,
+  accent: #ff6c00,
+  grey: #f7f7f7,
+);
+
+$light-theme: (
+  txt: black,
+  bg: white,
+  border: black,
+);
+
+$dark-theme: (
+  txt: white,
+  bg: black,
+  border: white,
+);
+
+body {
+  &--light-theme {
+    color: map-get($light-theme, 'txt');
+    background-color: map-get($light-theme, 'bg');
+    border-color: map-get($light-theme, 'border');
+  }
+
+  &--dark-theme {
+    color: map-get($dark-theme, 'txt');
+    background-color: map-get($dark-theme, 'bg');
+    border-color: map-get($dark-theme, 'border');
+  }
+}

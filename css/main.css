@@ -50,7 +50,7 @@ p {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -278,7 +278,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 40px;
+  gap: 20px;
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 11px;
@@ -303,13 +303,18 @@ html {
 .title {
   margin-bottom: 20px;
   font-family: var(--secondary-font);
-  font-size: 42px;
+  font-size: 28px;
   line-height: 1.1666666667;
   letter-spacing: 0.05em;
 }
 .title--theme-dark {
   margin-bottom: 44px;
   color: var(--light-txt-cl);
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 42px;
+  }
 }
 
 .undertitle {
@@ -320,11 +325,23 @@ html {
 }
 
 .container {
-  width: 1200px;
+  max-width: 448px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .btn {
@@ -352,7 +369,7 @@ html {
   -webkit-animation: heartBeat 6s ease-in-out 4s infinite both;
           animation: heartBeat 6s ease-in-out 4s infinite both;
 }
-.btn-theme-dark {
+.btn--theme-dark {
   color: var(--light-txt-cl);
 }
 
@@ -663,8 +680,8 @@ html {
 }
 
 .price {
-  padding-top: 120px;
-  padding-bottom: 50px;
+  padding-top: 84px;
+  padding-bottom: 84px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -673,29 +690,68 @@ html {
   background-repeat: no-repeat;
   background-position: center;
 }
+@media screen and (min-width: 768px) {
+  .price {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .price {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
 
 .price-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
   margin-bottom: 44px;
+}
+@media screen and (max-width: 1199.98px) {
+  .price-block {
+    padding: 32px 34px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
+    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .price-block {
+    padding: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .price-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+  }
 }
 
 .price-list {
   -ms-flex-preferred-size: 570px;
       flex-basis: 570px;
-  padding: 30px 20px;
 }
-
-.price-list:first-child {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
-  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+@media screen and (min-width: 1200px) {
+  .price-list {
+    padding: 30px 20px;
+  }
 }
-
-.price-list:last-child {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#090b13), to(rgba(9, 11, 19, 0.2)));
-  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+@media screen and (max-width: 1199.98px) {
+  .price-list:first-child {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .price-list:first-child {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
+    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .price-list:last-child {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#090b13), to(rgba(9, 11, 19, 0.2)));
+    background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
 }
 
 .price-item {
@@ -708,11 +764,14 @@ html {
   gap: 12px;
   color: var(--grey-cl);
 }
-
+@media screen and (max-width: 767.98px) {
+  .price-item {
+    font-size: 14px;
+  }
+}
 .price-item:not(:last-child) {
   margin-bottom: 20px;
 }
-
 .price-item::before {
   content: "";
   -webkit-box-flex: 1;
@@ -824,6 +883,39 @@ html {
   background-color: var(--grey-bg-cl);
 }
 
+@media screen and (max-width: 1199.98px) {
+  .team__container {
+    max-width: 450px;
+  }
+}
+
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+.team__list [class*=__item] {
+  -ms-flex-preferred-size: calc((100% - (30px * (1 - 1))) / 1);
+      flex-basis: calc((100% - (30px * (1 - 1))) / 1);
+}
+@media screen and (min-width: 1200px) {
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+  .team__list [class*=__item] {
+    -ms-flex-preferred-size: calc((100% - (30px * (3 - 1))) / 3);
+        flex-basis: calc((100% - (30px * (3 - 1))) / 3);
+  }
+}
+
 .team__block {
   position: relative;
   overflow: hidden;
@@ -932,7 +1024,44 @@ html {
 }
 
 .gallery__list {
-  --items: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+.gallery__list [class*=__item] {
+  -ms-flex-preferred-size: calc((100% - (30px * (1 - 1))) / 1);
+      flex-basis: calc((100% - (30px * (1 - 1))) / 1);
+}
+@media screen and (min-width: 768px) {
+  .gallery__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+  .gallery__list [class*=__item] {
+    -ms-flex-preferred-size: calc((100% - (30px * (2 - 1))) / 2);
+        flex-basis: calc((100% - (30px * (2 - 1))) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+  .gallery__list [class*=__item] {
+    -ms-flex-preferred-size: calc((100% - (30px * (4 - 1))) / 4);
+        flex-basis: calc((100% - (30px * (4 - 1))) / 4);
+  }
 }
 
 /**

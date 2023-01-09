@@ -7,5 +7,12 @@
 }
 
 .gallery__list {
-  --items: 4;
+  @include card-set(1);
+
+  @media screen and (min-width: 768px) {
+    @include card-set(2);
+  }
+  @media screen and (min-width: 1200px) {
+    @include card-set(4);
+  }
 }

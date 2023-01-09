@@ -1,7 +1,6 @@
 .price {
-  // @extend %section;
-
-  @include section($pb: 50px);
+  padding-top: 84px;
+  padding-bottom: 84px;
 
   max-width: 1600px;
   margin-left: auto;
@@ -11,25 +10,61 @@
   background-image: url(../images/price/bg-img.png);
   background-repeat: no-repeat;
   background-position: center;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 .price-block {
-  display: flex;
-  gap: 30px;
-
   margin-bottom: 44px;
+
+  // tablet only screen
+  @media screen and (max-width: 1199.98px) {
+    padding: 32px 34px;
+    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+
+  // phone only screen
+  @media screen and (max-width: 767.98px) {
+    padding: 30px;
+  }
+
+  // desktop screen
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 30px;
+  }
 }
 
 .price-list {
   flex-basis: 570px;
-  padding: 30px 20px;
-}
 
-.price-list:first-child {
-  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
-}
-.price-list:last-child {
-  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  @media screen and (min-width: 1200px) {
+    padding: 30px 20px;
+  }
+
+  &:first-child {
+    @media screen and (max-width: 1199.98px) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    }
+  }
+
+  &:last-child {
+    @media screen and (min-width: 1200px) {
+      background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+    }
+  }
 }
 
 .price-item {
@@ -38,17 +73,21 @@
   gap: 12px;
 
   color: var(--grey-cl);
-}
 
-.price-item:not(:last-child) {
-  margin-bottom: 20px;
-}
+  @media screen and (max-width: 767.98px) {
+    font-size: 14px;
+  }
 
-.price-item::before {
-  content: '';
-  flex-grow: 1;
-  height: 1px;
-  background-color: rgba(157, 164, 189, 0.12);
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background-color: rgba(157, 164, 189, 0.12);
+  }
 }
 
 .price-service {

@@ -9,6 +9,20 @@
   background-color: var(--grey-bg-cl);
 }
 
+.team__container {
+  @media screen and (max-width: 1199.98px) {
+    max-width: 450px;
+  }
+}
+
+.team__list {
+  @include card-set(1);
+
+  @media screen and (min-width: 1200px) {
+    @include card-set(3);
+  }
+}
+
 .team__block {
   position: relative;
   overflow: hidden;

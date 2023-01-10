@@ -1,0 +1,35 @@
+.nav {
+  margin-right: auto;
+
+  @include mq(phone-only) {
+    display: none;
+  }
+}
+
+.nav-list {
+  display: flex;
+  gap: 16px;
+
+  @include mq(desktop) {
+    gap: 30px;
+  }
+}
+
+.nav-link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  color: var(--light-txt-cl);
+  transition: color var(--anim-fast);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-txt-cl);
+  }
+}

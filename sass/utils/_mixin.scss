@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import './decimals';
 
 @mixin section($pt: 120px, $pb: 120px) {
@@ -5,12 +6,14 @@
   padding-bottom: $pb;
 }
 
-@mixin fonts($fs, $fw: 400, $lh, $ls: 0.02em, $color) {
+@mixin fonts($fs, $lh, $fw: 400, $ls: 0.02em, $color: false) {
   font-size: $fs;
   font-weight: $fw;
-  line-height: decimal-ceil($lh / $fs);
+  line-height: decimal-ceil(math.div($lh, $fs));
   letter-spacing: $ls;
-  color: $color;
+  @if $color {
+    color: $color;
+  }
 }
 
 // Mixin for grid elements
@@ -19,7 +22,7 @@
   flex-wrap: wrap;
   gap: $indent;
 
-  [class*='__item'] {
+  & > [class*='__item'] {
     flex-basis: calc((100% - (#{$indent} * (#{$items} - 1))) / #{$items});
   }
 }
@@ -36,7 +39,7 @@
     }
   }
   @if $type == 'phone-only' {
-    @media screen and (max-width: calc($tablet - 0.02)) {
+    @media screen and (max-width: ($tablet - 0.02)) {
       @content;
     }
   }
@@ -46,7 +49,7 @@
     }
   }
   @if $type == 'tablet-only' {
-    @media screen and (min-width: $tablet) and (max-width: calc($desktop - 0.02)) {
+    @media screen and (min-width: $tablet) and (max-width: ($desktop - 0.02)) {
       @content;
     }
   }
@@ -56,7 +59,7 @@
     }
   }
   @if $type == 'not-desktop' {
-    @media screen and (max-width: calc($desktop - 0.02)) {
+    @media screen and (max-width: ($desktop - 0.02)) {
       @content;
     }
   }

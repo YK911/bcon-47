@@ -26,30 +26,27 @@
 }
 
 .header-logo {
-  margin-right: 131px;
-  perspective: 500px;
-  animation: logo-rotate 1s ease-in-out 200ms alternate both;
+  @include mq(tablet) {
+    margin-right: 70px;
+  }
+  @include mq(desktop) {
+    margin-right: 131px;
+  }
 }
 
-.header-img {
+.header__img {
   fill: var(--main-txt-cl);
   transition: fill var(--anim-fast);
 
   .header.transparency & {
     fill: var(--grey-bg-cl);
   }
+
+  @include mq(phone-only) {
+    fill: var(--grey-bg-cl);
+  }
 }
 
-.header-nav {
-  margin-right: auto;
-}
-
-.header-list {
-  display: flex;
-  gap: 30px;
-}
-
-.header-nav-link,
 .header-contact {
   display: block;
   padding-top: 20px;
@@ -67,6 +64,10 @@
   &:focus {
     color: var(--accent-txt-cl);
   }
+
+  @include mq(not-desktop) {
+    display: none;
+  }
 }
 
 .header-wrapper {
@@ -75,4 +76,8 @@
   gap: 40px;
 
   padding-right: 20px;
+
+  @include mq(phone-only) {
+    display: none;
+  }
 }

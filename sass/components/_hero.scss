@@ -1,12 +1,18 @@
 .hero-container {
   position: relative;
-  display: flex;
+  @include mq(tablet) {
+    display: flex;
+  }
 }
 
 .hero-left-side {
   width: 100px;
   display: flex;
   align-items: flex-end;
+
+  @include mq(phone-only) {
+    display: none;
+  }
 }
 
 .hero-media-list {
@@ -15,9 +21,8 @@
 }
 
 .hero-right-side {
-  padding-top: 272px;
+  padding-top: 208px;
   padding-bottom: 208px;
-  padding-left: 100px;
 
   flex-grow: 1;
   background-color: var(--dark-bg-cl);
@@ -26,6 +31,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @include mq(tablet) {
+    padding-top: 272px;
+    padding-bottom: 237px;
+    padding-left: 100px;
+  }
 }
 
 .hero-title {

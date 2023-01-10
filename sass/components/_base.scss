@@ -10,14 +10,20 @@ html {
   letter-spacing: 0.02em;
 }
 
+.page-wrapper {
+  overflow-x: hidden;
+}
+
 .main-title {
   font-family: var(--secondary-font);
-  // font-size: 72px;
-  // line-height: calc(85 / 72);
-  // letter-spacing: 0.05em;
-  // color: var(--light-txt-cl);
+  font-size: 48px;
+  line-height: calc(85 / 72);
+  letter-spacing: 0.05em;
+  color: var(--light-txt-cl);
 
-  @include fonts(72px, null, 85px, 0.05em, var(--light-txt-cl));
+  @include mq(desktop) {
+    font-size: 72px;
+  }
 }
 
 .uppertitle {

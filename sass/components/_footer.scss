@@ -1,27 +1,43 @@
-/**
-  |============================
-  | Footer
-  |============================
-*/
 .footer {
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  background-color: var(--grey-bg-cl);
+  @include mq(not-desktop) {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
 }
 
 .footer-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+
+  @include mq(tablet) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .footer-copyright {
-  margin-right: auto;
-
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
   letter-spacing: 0.2em;
 
   color: var(--grey-cl);
+
+  @include mq(tablet-only) {
+    margin-top: 20px;
+  }
+}
+
+.footer-media-list {
+  @include mq(not-desktop) {
+    align-self: flex-end;
+  }
+}
+
+.footer-media-link {
+  @include mq(tablet) {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
 }

@@ -2,6 +2,10 @@
   position: absolute;
   right: 35px;
   bottom: 50%;
+
+  @include mq(phone-only) {
+    display: none;
+  }
 }
 
 .sider-pagination-item {
@@ -14,10 +18,9 @@
   &.active {
     width: 18px;
     background-color: var(--light-bg-cl);
-
-    &:not(:last-child) {
-      margin-bottom: 12px;
-    }
+  }
+  &:not(:last-child) {
+    margin-bottom: 12px;
   }
 }
 
@@ -28,6 +31,10 @@
   display: flex;
   align-items: center;
   gap: 24px;
+
+  @include mq(phone-only) {
+    display: none;
+  }
 }
 
 .slider-btn {
